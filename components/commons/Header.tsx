@@ -1,10 +1,16 @@
-import Image from "next/image"
+
+import {Roboto} from "next/font/google"
+
+const roboto_font = Roboto({
+    subsets:['latin'],
+    weight:["400", "900"]
+})
 
 export default function Header(){
     return(
-        <header className="px-8 py-5 flex items-center justify-center bg-slate-600 mb-8 ">
-            
-            <Image src={'/logo-rick-and-morty.png'} alt="logo rick and morty" width={500} height={500}></Image>
-        </header>
+        <div className={`px-8 flex justify-center bg-white mb-8 min-h-60 items-center gap-10 flex-col-reverse`}>
+            <h1 className={`${roboto_font.className} font-extrabold text-5xl text-center`}>Rick and Morty</h1>
+
+        </div>
     )
 }

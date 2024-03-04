@@ -1,4 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
+:root{
+    --font_madimi:"Madimi One", sans-serif;
+}
