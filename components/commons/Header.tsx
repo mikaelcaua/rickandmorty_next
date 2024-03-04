@@ -8,7 +8,7 @@ const roboto_font = Roboto({
 
 export default function Header(){
     return(
-        <div className={`px-8 flex justify-center bg-white mb-8 min-h-60 items-center gap-10 flex-col-reverse`}>
+        <div className={`px-8 flex justify-center bg-white mb-8 min-h-60 items-center gap-10 flex-col-reverse bg-`}>
             <h1 className={`${roboto_font.className} font-extrabold text-5xl text-center`}>Rick and Morty</h1>
 
         </div>

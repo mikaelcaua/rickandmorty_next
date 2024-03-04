@@ -1,7 +1,7 @@
 
 import { Card } from "@/components/home/Card";
 import ICard from "@/interfaces/ICard";
-import { GetApiData } from "@/services/GetApiData";
+import { CardList } from "@/services/CardList";
 import { useEffect, useState } from "react";
 
 export default function Home(){
@@ -9,7 +9,7 @@ export default function Home(){
     
     useEffect(() => {
       const fetchData = async () => {
-              const allcards = await GetApiData('');
+              const allcards = await CardList('');
               setCards(allcards.results);
       };
       fetchData();
