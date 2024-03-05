@@ -1,3 +1,4 @@
+import AboutPerson from "@/pages/[aboutperson]";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,7 +15,7 @@ export function Card({id,image, name,width,height}:CardProps){
     return(
     
     <div key={id} className="card bg-[#3C3E44] flex flex-col-reverse items-center justify-between box-border max-w-72 rounded-lg relative ">
-        <Link href={''} className="text-white font-madimi font-semibold p-5 my-3 border-white border-2 rounded-2xl  hover:text-[#3C3E44] hover:bg-white transition-background-color duration-1000 ease-in-out ">Saber Mais</Link>
+        <Link href={`${id}`} className="text-white font-madimi font-semibold p-5 my-3 border-white border-2 rounded-2xl  hover:text-[#3C3E44] hover:bg-white transition-background-color duration-1000 ease-in-out ">Saber Mais</Link>
 
         <section className="flex w-full justify-center flex-col ">
             <h2 className={`font-madimi  py-6 font-extrabold text-white max-w-60 px-1 text-center self-center min-h-20 text-2xl`}>{name}</h2>

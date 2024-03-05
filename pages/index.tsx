@@ -1,16 +1,17 @@
 
 import { Card } from "@/components/home/Card";
-import ICard from "@/interfaces/ICard";
+import {IPerson} from "@/interfaces/IPerson";
 import { CardList } from "@/services/CardList";
+
 import { useEffect, useState } from "react";
 
 export default function Home(){
-    const [cards, setCards] = useState<ICard[]>([]);
+    const [cards, setCards] = useState<IPerson[]>([]);
     
     useEffect(() => {
       const fetchData = async () => {
               const allcards = await CardList('');
-              setCards(allcards.results);
+              setCards((prev)=> allcards.results);
       };
       fetchData();
     }, []);
